@@ -5,6 +5,9 @@ from datetime import datetime, timedelta
 import json
 
 app = Flask(__name__)
+@app.route('/')
+def Assignment():
+    return "Assignment Backend API"
 
 # Function to retrieve weather information from the external API
 def get_weather(city, date):
@@ -130,3 +133,6 @@ def find_events():
     conn.close()
 
     return json.dumps(pages_list, sort_keys=False)
+
+if __name__ = '__main__':
+    app.run()
