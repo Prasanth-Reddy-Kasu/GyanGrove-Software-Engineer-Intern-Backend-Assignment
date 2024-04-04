@@ -134,5 +134,5 @@ def find_events():
 
     return json.dumps(pages_list, sort_keys=False)
 
-if __name__ = '__main__':
+if __name__ == '__main__':
     app.run()
