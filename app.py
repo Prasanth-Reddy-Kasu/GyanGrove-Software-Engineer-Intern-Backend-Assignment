@@ -3,7 +3,6 @@ import sqlite3
 import requests
 from datetime import datetime, timedelta
 import json
-import os
 
 app = Flask(__name__)
 
@@ -131,7 +130,3 @@ def find_events():
     conn.close()
 
     return json.dumps(pages_list, sort_keys=False)
-
-if __name__ == '__main__':
-    # Run the app using Gunicorn
-    app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
